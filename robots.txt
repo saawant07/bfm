@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://saawant07.github.io/bfm/sitemap.xml

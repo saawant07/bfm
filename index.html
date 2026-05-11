@@ -12,17 +12,17 @@
   <meta name="keywords" content="premium digital growth studio, brand strategy agency india, high converting website design, digital marketing studio, premium web design agency, brand positioning, growth marketing, performance marketing india">
   <meta name="author" content="Brand Forge Media">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <link rel="canonical" href="https://saawant07.github.io/bfm/">
+  <link rel="canonical" href="https://brandforge.media/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:site_name" content="Brand Forge Media">
   <meta property="og:title" content="Brand Forge Media | We Build Brands That Sell">
   <meta property="og:description" content="Premium growth studio in India. Brand strategy, websites that convert, content that ranks, ads that pay for themselves. Built for ambitious founders.">
-  <meta property="og:image" content="https://saawant07.github.io/bfm/og-image.jpg">
+  <meta property="og:image" content="https://brandforge.media/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Brand Forge Media homepage showing growth dashboard, services, and client results">
-  <meta property="og:url" content="https://saawant07.github.io/bfm/">
+  <meta property="og:url" content="https://brandforge.media/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_IN">
 
@@ -30,7 +30,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Brand Forge Media | We Build Brands That Sell">
   <meta name="twitter:description" content="Premium growth studio in India. Strategy, websites, content, and ads. Built for founders who want results.">
-  <meta name="twitter:image" content="https://saawant07.github.io/bfm/og-image.jpg">
+  <meta name="twitter:image" content="https://brandforge.media/og-image.jpg">
   <meta name="twitter:image:alt" content="Brand Forge Media homepage showing growth dashboard and client results">
 
   <!-- Favicon & App Icons -->
@@ -1845,9 +1845,22 @@
       position: relative;
       min-height: 260px;
       overflow: hidden;
-      background:
-        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 1px 40px),
-        linear-gradient(135deg, var(--media-a), var(--media-b));
+      background: linear-gradient(135deg, var(--media-a), var(--media-b));
+    }
+
+    .case-media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.85;
+      transition: opacity 0.4s ease, transform 0.6s var(--ease);
+    }
+
+    .case-card:hover .case-media img {
+      opacity: 1;
+      transform: scale(1.03);
     }
 
     .case-card:first-child .case-media {
@@ -1855,18 +1868,12 @@
     }
 
     .case-media::before {
-      content: "";
-      position: absolute;
-      inset: 28px;
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      border-radius: var(--radius);
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.06));
-      backdrop-filter: blur(10px);
+      display: none;
     }
 
     .case-media::after {
       content: "";
+      z-index: 3;
       position: absolute;
       inset: 0;
       pointer-events: none;
@@ -1920,8 +1927,9 @@
 
     .case-badge {
       position: absolute;
-      top: 46px;
-      left: 46px;
+      z-index: 2;
+      top: 16px;
+      left: 16px;
       padding: 9px 11px;
       border-radius: var(--radius);
       color: var(--white);
@@ -2196,20 +2204,15 @@
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
       align-items: stretch;
-    }
-
-    .pricing-grid > :first-child,
-    .pricing-grid > :nth-child(2) {
-      grid-column: span 1;
     }
 
     .price-card {
       display: flex;
       flex-direction: column;
-      padding: 30px;
+      padding: 24px;
       color: var(--white);
       border-color: var(--border-dark);
       background: rgba(255, 255, 255, 0.055);
@@ -2248,7 +2251,7 @@
       margin: 0;
       color: var(--white);
       font-family: var(--serif);
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-weight: 800;
     }
 
@@ -2263,10 +2266,10 @@
     }
 
     .plan-note {
-      min-height: 54px;
-      margin: 16px 0 24px;
+      min-height: 100px;
+      margin: 12px 0 18px;
       color: rgba(255, 255, 255, 0.68);
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.55;
     }
 
@@ -2280,7 +2283,7 @@
 
     .plan-price strong {
       color: var(--white);
-      font-size: 2.8rem;
+      font-size: 2.2rem;
       font-weight: 900;
       line-height: 1;
     }
@@ -2300,15 +2303,16 @@
 
     .features {
       display: grid;
-      gap: 13px;
-      margin: 0 0 30px;
+      gap: 10px;
+      margin: 0 0 24px;
+      align-content: start;
     }
 
     .features li {
       display: flex;
       gap: 10px;
       color: rgba(255, 255, 255, 0.76);
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.55;
     }
 
@@ -2648,8 +2652,16 @@
         transform: none;
       }
 
+      .pricing-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .pricing-grid > :nth-child(4),
+      .pricing-grid > :nth-child(5) {
+        grid-column: span 1;
+      }
+
       .services-grid,
-      .pricing-grid,
       .process-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -3133,9 +3145,7 @@
           <article class="case-card reveal" style="--media-a: #10273A; --media-b: #3A6D86">
             <div class="case-media">
               <span class="case-badge">Fintech / SEO + Web</span>
-              <div class="case-chart" aria-hidden="true">
-                <i style="--h: 28%"></i><i style="--h: 36%"></i><i style="--h: 54%"></i><i style="--h: 62%"></i><i style="--h: 79%"></i><i style="--h: 94%"></i>
-              </div>
+              <img src="/assets/case-fintech.png" alt="Northstar Pay fintech analytics dashboard showing 340% organic traffic growth, SEO metrics, and conversion funnel" loading="lazy">
             </div>
             <div class="case-body">
               <span>Northstar Pay · 340% organic traffic growth</span>
@@ -3147,9 +3157,7 @@
           <article class="case-card reveal delay-1" style="--media-a: #5B3128; --media-b: #B56A50">
             <div class="case-media">
               <span class="case-badge">Beauty / Launch</span>
-              <div class="case-chart" aria-hidden="true">
-                <i style="--h: 44%"></i><i style="--h: 52%"></i><i style="--h: 68%"></i><i style="--h: 74%"></i><i style="--h: 82%"></i><i style="--h: 90%"></i>
-              </div>
+              <img src="/assets/case-beauty.png" alt="Velvet Labs premium skincare product launch showing campaign creative, social ads, and 6.8x ROAS performance" loading="lazy">
             </div>
             <div class="case-body">
               <span>Velvet Labs · 6.8x launch ROAS</span>
@@ -3160,9 +3168,7 @@
           <article class="case-card reveal delay-2" style="--media-a: #123328; --media-b: #7DA48F">
             <div class="case-media">
               <span class="case-badge">SaaS / Conversion</span>
-              <div class="case-chart" aria-hidden="true">
-                <i style="--h: 35%"></i><i style="--h: 46%"></i><i style="--h: 50%"></i><i style="--h: 66%"></i><i style="--h: 76%"></i><i style="--h: 88%"></i>
-              </div>
+              <img src="/assets/case-saas.png" alt="Stackly SaaS conversion dashboard showing A/B test results with 41% demo conversion lift and user journey flow" loading="lazy">
             </div>
             <div class="case-body">
               <span>Stackly · 41% demo conversion lift</span>
@@ -3253,7 +3259,7 @@
         <div class="pricing-grid">
           <article class="price-card reveal" data-plan data-monthly="14999">
             <div class="plan-label"><h3>Starter</h3></div>
-            <p class="plan-note">You're just starting out and need a clean digital foundation. No bloat. Just the essentials done properly.</p>
+            <p class="plan-note">Just starting out. Clean digital foundation. No bloat. The essentials, done properly.</p>
             <div class="plan-price"><span class="original-price" data-original></span><strong data-price>₹14,999</strong><span>/mo</span></div>
             <ul class="features">
               <li>Brand audit & competitor analysis</li>
@@ -3268,7 +3274,7 @@
 
           <article class="price-card reveal delay-1" data-plan data-monthly="29999">
             <div class="plan-label"><h3>Growth</h3></div>
-            <p class="plan-note">You've got traction and need a proper growth engine. Strategy, content, search, and web working together as one system.</p>
+            <p class="plan-note">You've got traction. Time for a real growth engine. Strategy, content, and web as one system.</p>
             <div class="plan-price"><span class="original-price" data-original></span><strong data-price>₹29,999</strong><span>/mo</span></div>
             <ul class="features">
               <li>Everything in Starter</li>
@@ -3285,7 +3291,7 @@
 
           <article class="price-card featured reveal delay-2" data-plan data-monthly="49999">
             <div class="plan-label"><h3>Premium</h3><span class="popular">Most Chosen</span></div>
-            <p class="plan-note">This is the full stack. Brand strategy, website design, content, paid media, and analytics. Everything your growth needs, handled by one team that actually talks to each other.</p>
+            <p class="plan-note">The full stack. Strategy, website, content, paid media, analytics. One team. Everything connected.</p>
             <div class="plan-price"><span class="original-price" data-original></span><strong data-price>₹49,999</strong><span>/mo</span></div>
             <ul class="features">
               <li>Everything in Growth</li>
@@ -3303,7 +3309,7 @@
 
           <article class="price-card reveal" data-plan data-monthly="79999">
             <div class="plan-label"><h3>Scale</h3></div>
-            <p class="plan-note">You're scaling hard across channels with aggressive targets. Complex funnels, bigger budgets, tighter timelines. We've got it.</p>
+            <p class="plan-note">Scaling hard. Multiple channels. Bigger budgets. Tighter timelines. We handle it.</p>
             <div class="plan-price"><span class="original-price" data-original></span><strong data-price>₹79,999</strong><span>/mo</span></div>
             <ul class="features">
               <li>Everything in Premium</li>
@@ -3321,7 +3327,7 @@
 
           <article class="price-card reveal delay-1" data-plan="custom">
             <div class="plan-label"><h3>Enterprise</h3></div>
-            <p class="plan-note">For established brands and marketing teams with complex campaigns, multi-market funnels, and enterprise-grade reporting and compliance needs.</p>
+            <p class="plan-note">Complex campaigns. Multi-market funnels. Enterprise reporting. Custom everything.</p>
             <div class="plan-price"><strong>Custom</strong></div>
             <ul class="features">
               <li>Everything in Scale</li>
@@ -3762,17 +3768,17 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://saawant07.github.io/bfm/#organization",
+    "@id": "https://brandforge.media/#organization",
     "name": "Brand Forge Media",
     "alternateName": "BFM",
-    "url": "https://saawant07.github.io/bfm/",
+    "url": "https://brandforge.media/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://saawant07.github.io/bfm/og-image.jpg",
+      "url": "https://brandforge.media/og-image.jpg",
       "width": 1200,
       "height": 630
     },
-    "image": "https://saawant07.github.io/bfm/og-image.jpg",
+    "image": "https://brandforge.media/og-image.jpg",
     "description": "Brand Forge Media is a premium digital growth studio specializing in brand strategy, high-converting website design, UI/UX design, content systems, and performance marketing for ambitious brands across India and globally.",
     "foundingDate": "2019",
     "founder": {
@@ -3872,18 +3878,18 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://saawant07.github.io/bfm/#website",
+    "@id": "https://brandforge.media/#website",
     "name": "Brand Forge Media",
     "alternateName": "BFM | Premium Digital Growth Studio",
-    "url": "https://saawant07.github.io/bfm/",
+    "url": "https://brandforge.media/",
     "description": "Premium digital growth studio offering brand strategy, high-converting website design, content systems, and performance marketing.",
     "publisher": {
-      "@id": "https://saawant07.github.io/bfm/#organization"
+      "@id": "https://brandforge.media/#organization"
     },
     "inLanguage": "en-IN",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://saawant07.github.io/bfm/?q={search_term_string}",
+      "target": "https://brandforge.media/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
@@ -3903,11 +3909,11 @@
         "position": 1,
         "item": {
           "@type": "Service",
-          "@id": "https://saawant07.github.io/bfm/#brand-strategy",
+          "@id": "https://brandforge.media/#brand-strategy",
           "name": "Brand Strategy & Positioning",
           "description": "We define the category, buyer tension, core message, proof points, offers, and launch narrative so your brand becomes easier to understand, remember, and choose. Includes positioning sprints, message architecture, offer strategy, and launch narrative development.",
           "provider": {
-            "@id": "https://saawant07.github.io/bfm/#organization"
+            "@id": "https://brandforge.media/#organization"
           },
           "serviceType": "Brand Strategy",
           "areaServed": "Worldwide",
@@ -3928,11 +3934,11 @@
         "position": 2,
         "item": {
           "@type": "Service",
-          "@id": "https://saawant07.github.io/bfm/#web-design",
+          "@id": "https://brandforge.media/#web-design",
           "name": "Premium Website Design & Development",
           "description": "Premium responsive websites, landing pages, and conversion funnels with strong information hierarchy, speed optimization, trust signals, and clear conversion paths. We build high-converting websites with world-class UI/UX design.",
           "provider": {
-            "@id": "https://saawant07.github.io/bfm/#organization"
+            "@id": "https://brandforge.media/#organization"
           },
           "serviceType": "Web Design & Development",
           "areaServed": "Worldwide"
@@ -3943,11 +3949,11 @@
         "position": 3,
         "item": {
           "@type": "Service",
-          "@id": "https://saawant07.github.io/bfm/#content-systems",
+          "@id": "https://brandforge.media/#content-systems",
           "name": "Content Systems That Convert",
           "description": "Technical SEO, content clusters, internal linking architecture, and thought leadership content built to compound search visibility and buyer trust over time. Our content systems turn organic traffic into qualified pipeline.",
           "provider": {
-            "@id": "https://saawant07.github.io/bfm/#organization"
+            "@id": "https://brandforge.media/#organization"
           },
           "serviceType": "Content Marketing & SEO",
           "areaServed": "Worldwide"
@@ -3958,11 +3964,11 @@
         "position": 4,
         "item": {
           "@type": "Service",
-          "@id": "https://saawant07.github.io/bfm/#performance-marketing",
+          "@id": "https://brandforge.media/#performance-marketing",
           "name": "Performance Acquisition & Growth",
           "description": "Meta, Google, and retargeting campaigns backed by rapid creative iteration, landing page alignment, and clean reporting. We manage paid media with a focus on ROAS, pipeline velocity, and efficient customer acquisition cost.",
           "provider": {
-            "@id": "https://saawant07.github.io/bfm/#organization"
+            "@id": "https://brandforge.media/#organization"
           },
           "serviceType": "Performance Marketing",
           "areaServed": "Worldwide"
@@ -4056,43 +4062,43 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://saawant07.github.io/bfm/"
+        "item": "https://brandforge.media/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "About",
-        "item": "https://saawant07.github.io/bfm/#about"
+        "item": "https://brandforge.media/#about"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Services",
-        "item": "https://saawant07.github.io/bfm/#services"
+        "item": "https://brandforge.media/#services"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Work",
-        "item": "https://saawant07.github.io/bfm/#work"
+        "item": "https://brandforge.media/#work"
       },
       {
         "@type": "ListItem",
         "position": 5,
         "name": "Process",
-        "item": "https://saawant07.github.io/bfm/#process"
+        "item": "https://brandforge.media/#process"
       },
       {
         "@type": "ListItem",
         "position": 6,
         "name": "Pricing",
-        "item": "https://saawant07.github.io/bfm/#pricing"
+        "item": "https://brandforge.media/#pricing"
       },
       {
         "@type": "ListItem",
         "position": 7,
         "name": "Contact",
-        "item": "https://saawant07.github.io/bfm/#contact"
+        "item": "https://brandforge.media/#contact"
       }
     ]
   }
