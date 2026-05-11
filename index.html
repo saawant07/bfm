@@ -701,13 +701,15 @@
       transform: translate3d(0, 34px, 0) scale(0.975);
       transition:
         opacity 0.92s var(--ease),
+        filter 0.92s var(--ease),
         transform 0.92s var(--ease);
       transition-delay: var(--delay, 0s);
-      will-change: opacity, transform;
+      will-change: opacity, transform, filter;
     }
 
     .js .reveal.is-visible {
       opacity: 1;
+      filter: none;
       transform: translate3d(0, 0, 0) scale(1) rotate(0);
     }
 
