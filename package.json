@@ -1,0 +1,21 @@
+{
+  "name": "brand-forge-media",
+  "version": "1.0.0",
+  "description": "Standalone premium single-page website for Brand Forge Media.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "vite": "^8.0.11"
+  },
+  "devDependencies": {
+    "playwright": "^1.59.1"
+  }
+}
