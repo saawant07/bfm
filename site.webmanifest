@@ -1,0 +1,21 @@
+{
+  "name": "Brand Forge Media",
+  "short_name": "BFM",
+  "description": "Premium digital growth studio — brand strategy, high-converting website design & scalable acquisition.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D1814",
+  "theme_color": "#0D1814",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
