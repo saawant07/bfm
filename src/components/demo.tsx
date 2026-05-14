@@ -187,10 +187,10 @@ export default function FlowArtDefaultDemo() {
         </div>
       </FlowSection>
 
-      <FlowSection aria-label="Optimization Engine" style={{ backgroundColor: '#145940', color: '#F9F7F2' }}>
+      <FlowSection aria-label="Optimization Engine" style={{ backgroundColor: '#0E3528', color: '#F9F7F2' }}>
         <div className="flex flex-col h-full flex-1">
           <div className="max-w-4xl mb-auto">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#D4A843] mb-6">04 — Optimization Engine</p>
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#B8862A] mb-6">04 — Optimization Engine</p>
             <h1
               className="text-[clamp(2.5rem,5vw,5rem)] font-medium leading-[1.05] tracking-normal" 
               style={{ fontFamily: 'Fraunces, serif' }}
@@ -200,14 +200,14 @@ export default function FlowArtDefaultDemo() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center mt-12 pb-8">
-            <div className="lg:col-span-5 relative w-full aspect-[4/3] overflow-hidden rounded-xl border border-[#D4A843]/20 shadow-2xl">
+            <div className="lg:col-span-5 relative w-full aspect-[4/3] overflow-hidden rounded-xl border border-[#B8862A]/20 shadow-2xl">
               <img src="/optimization_engine_1778700383220.png" alt="Optimization Engine" className="object-cover w-full h-full opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#145940]/80 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0E3528]/80 via-transparent to-transparent"></div>
             </div>
 
             <div className="lg:col-span-7 flex flex-col gap-6">
               <div className="flex items-start gap-4 mb-2">
-                <LineChart className="w-8 h-8 text-[#D4A843] shrink-0 mt-1" strokeWidth={1.5} />
+                <LineChart className="w-8 h-8 text-[#B8862A] shrink-0 mt-1" strokeWidth={1.5} />
                 <p className="text-[clamp(1.1rem,1.3vw,1.25rem)] font-light leading-relaxed text-[#F9F7F2]/90">
                   Continuous multivariate testing, data analysis, and budget reallocation to drive compounding ROI and systematically lower acquisition costs.
                 </p>
@@ -215,28 +215,28 @@ export default function FlowArtDefaultDemo() {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 border-t border-white/10 pt-6">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#D4A843] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-[#B8862A] shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-semibold text-[0.95rem] tracking-wide mb-1">A/B/n Testing</h4>
                     <p className="text-sm text-white/60 font-light leading-relaxed">Rigorous experimentation on headlines, hooks, offers, and visual anchors.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#D4A843] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-[#B8862A] shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-semibold text-[0.95rem] tracking-wide mb-1">Capital Allocation</h4>
                     <p className="text-sm text-white/60 font-light leading-relaxed">Shifting budgets intra-week to the highest-performing cohorts and channels.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#D4A843] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-[#B8862A] shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-semibold text-[0.95rem] tracking-wide mb-1">Attribution Modeling</h4>
                     <p className="text-sm text-white/60 font-light leading-relaxed">Mapping the true multi-touch customer journey to eliminate wasted spend.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#D4A843] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-[#B8862A] shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-semibold text-[0.95rem] tracking-wide mb-1">Scale Mechanics</h4>
                     <p className="text-sm text-white/60 font-light leading-relaxed">Safely increasing media volume without breaking efficiency thresholds.</p>

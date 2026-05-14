@@ -1,9 +1,9 @@
-import FlowArtDefaultDemo from './components/demo';
+import ForgeMethodology from './components/ForgeMethodology';
 
 function App() {
   return (
     <div className="w-full">
-      <FlowArtDefaultDemo />
+      <ForgeMethodology />
     </div>
   );
 }

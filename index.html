@@ -238,6 +238,7 @@
       background: rgba(255, 255, 255, 0.72);
       backdrop-filter: blur(24px) saturate(1.7);
       -webkit-backdrop-filter: blur(24px) saturate(1.7);
+      -webkit-transform: translateZ(0);
       box-shadow:
         0 6px 36px rgba(0, 0, 0, 0.08),
         0 1px 3px rgba(0, 0, 0, 0.04);
@@ -928,7 +929,7 @@
         repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 72px),
         linear-gradient(120deg, rgba(58, 109, 134, 0.2), transparent 46%),
         linear-gradient(300deg, rgba(185, 147, 69, 0.18), transparent 50%),
-        linear-gradient(180deg, #0B1411 0%, #14231D 100%);
+        linear-gradient(180deg, #0D1814 0%, #15241D 100%);
       background-position: 0 0, 0 0, 0 0, 100% 0, 0 0;
       animation: heroAtmosphere 16s ease-in-out infinite alternate;
     }
@@ -1002,23 +1003,24 @@
     .hero h1 {
       margin: 22px 0 0;
       color: var(--white);
-      font-family: var(--serif);
-      font-size: clamp(3.5rem, 6vw, 5.8rem);
-      font-weight: 800;
-      line-height: 0.94;
-      letter-spacing: -0.01em;
+      font-family: var(--font);
+      font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
       text-wrap: balance;
     }
 
     .hero-subtitle {
       display: block;
       margin-top: 18px;
-      color: #E3C974;
+      color: var(--gold);
       font-family: var(--font);
-      font-size: 1.44rem;
-      font-weight: 800;
-      line-height: 1.35;
-      letter-spacing: 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     .hero-copy {
@@ -2952,8 +2954,8 @@
       }
 
       .hero h1 {
-        font-size: 3.15rem;
-        line-height: 1.02;
+        font-size: 2.4rem;
+        line-height: 1.1;
       }
 
       .hero-subtitle {
@@ -3079,6 +3081,61 @@
       }
     }
 
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 52px;
+      height: 52px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9000;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18), 0 1px 4px rgba(0, 0, 0, 0.10);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55);
+    }
+
+    .hero-mobile-metrics {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .hero-mobile-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: #1e1e1e;
+        border: 1px solid #1e1e1e;
+        margin-top: 24px;
+      }
+      .hmm-item {
+        background: #111;
+        padding: 16px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .hmm-val {
+        font-size: 22px;
+        font-weight: 700;
+        color: #FF6B00;
+        line-height: 1;
+      }
+      .hmm-label {
+        font-size: 10px;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
@@ -3151,12 +3208,11 @@
 
       <div class="container hero-inner">
         <div class="hero-copy-block">
-          <span class="eyebrow reveal"><span class="eyebrow-dot" aria-hidden="true"></span>Partnering with 4 new clients this quarter</span>
-          <h1 class="reveal delay-1">Digital Growth & <span class="text-gradient">Brand Authority.</span></h1>
-          <span class="hero-subtitle reveal delay-1">Brand Strategy. Digital Platforms. Acquisition Systems.</span>
-          <p class="hero-copy reveal delay-2">We partner with ambitious founders to build cohesive digital ecosystems. From sharp positioning and high-performance platforms to scalable acquisition engines—we align your entire digital footprint with revenue.</p>
+          <h1 class="reveal delay-1">Your Brand, Growing Online.<br><span style="color: var(--gold)">Finally.</span></h1>
+          <span class="hero-subtitle reveal delay-1">Brand Strategy · Digital Platforms · Acquisition Systems</span>
+          <p class="hero-copy reveal delay-2">We help local businesses in West Bengal get real visibility online — social media, SEO, and content that actually works.</p>
           <div class="hero-actions reveal delay-3">
-            <a class="btn btn-gold" href="#contact">Start a Project <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+            <a class="btn btn-gold" href="https://wa.me/918927252245">Start a Project <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
             <a class="btn btn-light" href="#work">View Case Studies</a>
           </div>
           <div class="hero-system reveal delay-3" aria-label="Four pillars of the Brand Forge growth system">
@@ -3165,10 +3221,10 @@
             <span style="--pulse-delay: 0.32s">Acquisition</span>
             <span style="--pulse-delay: 0.48s">Conversion</span>
           </div>
-          <div class="hero-proof reveal delay-3" aria-label="Key performance stats: 212+ brands, 48Cr+ revenue, 96% renewal">
-            <div class="proof-item"><strong>212+</strong><span>brands scaled</span></div>
-            <div class="proof-item"><strong>₹48Cr+</strong><span>client revenue influenced</span></div>
-            <div class="proof-item"><strong>96%</strong><span>clients renew</span></div>
+          <div class="hero-proof reveal delay-3" aria-label="Key performance stats">
+            <div class="proof-item"><strong>2</strong><span>clients worked with</span></div>
+            <div class="proof-item"><strong>3–5</strong><span>day delivery</span></div>
+            <div class="proof-item"><strong>AI</strong><span>powered workflow</span></div>
           </div>
         </div>
 
@@ -3204,6 +3260,11 @@
               <span>Web</span>
             </div>
           </div>
+          <div class="hero-mobile-metrics">
+            <div class="hmm-item"><span class="hmm-val">3–5</span><span class="hmm-label">Day Delivery</span></div>
+            <div class="hmm-item"><span class="hmm-val">AI</span><span class="hmm-label">Powered Workflow</span></div>
+            <div class="hmm-item"><span class="hmm-val">WB</span><span class="hmm-label">Based & Available</span></div>
+          </div>
         </div>
       </div>
     </section>
@@ -3211,16 +3272,16 @@
     <section class="logo-ticker" aria-label="Industries we work with: Fintech, SaaS, D2C, Beauty, and more">
       <div class="ticker-track">
         <div class="ticker-list">
-          <span>Fintech</span><span>Healthtech</span><span>SaaS</span><span>Beauty</span><span>Real Estate</span><span>Hospitality</span><span>E-commerce</span><span>Education</span><span>D2C</span><span>Logistics</span><span>AI / ML</span><span>Legal Tech</span>
+          <span>Restaurants</span><span>Salons</span><span>Coaching Institutes</span><span>D2C Brands</span><span>Personal Brands</span><span>Local Retail</span><span>Clinics</span><span>Real Estate</span><span>Gyms</span><span>Photography Studios</span><span>Event Planners</span><span>Tutoring Centers</span>
         </div>
         <div class="ticker-list" aria-hidden="true">
-          <span>Fintech</span><span>Healthtech</span><span>SaaS</span><span>Beauty</span><span>Real Estate</span><span>Hospitality</span><span>E-commerce</span><span>Education</span><span>D2C</span><span>Logistics</span><span>AI / ML</span><span>Legal Tech</span>
+          <span>Restaurants</span><span>Salons</span><span>Coaching Institutes</span><span>D2C Brands</span><span>Personal Brands</span><span>Local Retail</span><span>Clinics</span><span>Real Estate</span><span>Gyms</span><span>Photography Studios</span><span>Event Planners</span><span>Tutoring Centers</span>
         </div>
         <div class="ticker-list" aria-hidden="true">
-          <span>Fintech</span><span>Healthtech</span><span>SaaS</span><span>Beauty</span><span>Real Estate</span><span>Hospitality</span><span>E-commerce</span><span>Education</span><span>D2C</span><span>Logistics</span><span>AI / ML</span><span>Legal Tech</span>
+          <span>Restaurants</span><span>Salons</span><span>Coaching Institutes</span><span>D2C Brands</span><span>Personal Brands</span><span>Local Retail</span><span>Clinics</span><span>Real Estate</span><span>Gyms</span><span>Photography Studios</span><span>Event Planners</span><span>Tutoring Centers</span>
         </div>
         <div class="ticker-list" aria-hidden="true">
-          <span>Fintech</span><span>Healthtech</span><span>SaaS</span><span>Beauty</span><span>Real Estate</span><span>Hospitality</span><span>E-commerce</span><span>Education</span><span>D2C</span><span>Logistics</span><span>AI / ML</span><span>Legal Tech</span>
+          <span>Restaurants</span><span>Salons</span><span>Coaching Institutes</span><span>D2C Brands</span><span>Personal Brands</span><span>Local Retail</span><span>Clinics</span><span>Real Estate</span><span>Gyms</span><span>Photography Studios</span><span>Event Planners</span><span>Tutoring Centers</span>
         </div>
       </div>
     </section>
@@ -3230,20 +3291,22 @@
         <span class="trusted-by-label reveal">Trusted By Ambitious Brands</span>
         <div class="trusted-marquee-wrap reveal delay-1">
           <div class="trusted-logos">
-            <span>Northstar Pay</span>
-            <span>Velvet Labs</span>
-            <span>Stackly</span>
-            <span>ClearPath AI</span>
-            <span>UrbanNest</span>
-            <span>Finova Capital</span>
-            <span>Bloom Studio</span>
-            <span aria-hidden="true">Northstar Pay</span>
-            <span aria-hidden="true">Velvet Labs</span>
-            <span aria-hidden="true">Stackly</span>
-            <span aria-hidden="true">ClearPath AI</span>
-            <span aria-hidden="true">UrbanNest</span>
-            <span aria-hidden="true">Finova Capital</span>
-            <span aria-hidden="true">Bloom Studio</span>
+            <span>Restaurants</span>
+            <span>Salons</span>
+            <span>Coaching Institutes</span>
+            <span>D2C Brands</span>
+            <span>Personal Brands</span>
+            <span>Local Retail</span>
+            <span>Clinics</span>
+            <span>Real Estate</span>
+            <span aria-hidden="true">Restaurants</span>
+            <span aria-hidden="true">Salons</span>
+            <span aria-hidden="true">Coaching Institutes</span>
+            <span aria-hidden="true">D2C Brands</span>
+            <span aria-hidden="true">Personal Brands</span>
+            <span aria-hidden="true">Local Retail</span>
+            <span aria-hidden="true">Clinics</span>
+            <span aria-hidden="true">Real Estate</span>
           </div>
         </div>
       </div>
@@ -3253,13 +3316,13 @@
       <div class="container about-grid">
         <div>
           <span class="section-kicker reveal">About Brand Forge</span>
-          <h2 class="section-title reveal delay-1">A Growth Partner, Not An Agency.</h2>
+          <h2 class="section-title reveal delay-1">Built by a Founder. For Local Brands.</h2>
           <div class="lead-copy reveal delay-2">
-            <p>We operate as an extension of your team, bringing senior-level expertise across brand strategy, engineering, and performance marketing. We build structural digital systems designed for high-growth and established enterprises.</p>
+            <p>Hi, I'm Sumant Gupta. I operate as an extension of your team, bringing expertise across brand strategy, engineering, and performance marketing. I build structural digital systems designed for high-growth and established enterprises.</p>
             <p>Our engagements are defined by transparent metrics, rigorous execution, and a singular focus on driving qualified pipeline and enterprise value.</p>
           </div>
           <div class="micro-proof reveal delay-3">
-            <span>Senior-led strategy</span>
+            <span>Solo student founder</span>
             <span>Weekly delivery rhythm</span>
             <span>Transparent reporting</span>
           </div>
@@ -3281,7 +3344,6 @@
           <div class="board-metrics">
             <div class="board-metric"><strong>7 yrs</strong><span>brand and performance work</span></div>
             <div class="board-metric"><strong>48</strong><span>markets reached</span></div>
-            <div class="board-metric"><strong>18k</strong><span>content assets shipped</span></div>
             <div class="board-metric"><strong>31%</strong><span>avg. conversion lift</span></div>
           </div>
           <div class="board-list">
@@ -3376,185 +3438,31 @@
         <div class="case-grid">
           <article class="case-card reveal" style="--media-a: #10273A; --media-b: #3A6D86">
             <div class="case-media">
-              <span class="case-badge">Fintech / SEO + Web</span>
-              <img src="/assets/case-fintech.png" alt="Northstar Pay fintech analytics dashboard showing 340% organic traffic growth, SEO metrics, and conversion funnel" loading="lazy">
+              <span class="case-badge">Web Development</span>
+              <div style="background: linear-gradient(135deg, #111 0%, #1a1a1a 100%); width: 100%; height: 100%; border: 1px solid #222;"></div>
             </div>
             <div class="case-body">
-              <span>Northstar Pay · 340% organic traffic growth</span>
-              <h3>Rebuilt the search architecture and demo journey for a complex B2B fintech platform.</h3>
-              <p>Messaging, content clusters, and conversion pages worked together. Result? Faster path from Google to sales conversation.</p>
-            </div>
-          </article>
-
-          <article class="case-card reveal delay-1" style="--media-a: #5B3128; --media-b: #B56A50">
-            <div class="case-media">
-              <span class="case-badge">Beauty / Launch</span>
-              <img src="/assets/case-beauty.png" alt="Velvet Labs premium skincare product launch showing campaign creative, social ads, and 6.8x ROAS performance" loading="lazy">
-            </div>
-            <div class="case-body">
-              <span>Velvet Labs · 6.8x launch ROAS</span>
-              <h3>Built the launch creative, ran paid social tests, and sharpened the offer for a premium skincare brand.</h3>
-            </div>
-          </article>
-
-          <article class="case-card reveal delay-2" style="--media-a: #123328; --media-b: #7DA48F">
-            <div class="case-media">
-              <span class="case-badge">SaaS / Conversion</span>
-              <img src="/assets/case-saas.png" alt="Stackly SaaS conversion dashboard showing A/B test results with 41% demo conversion lift and user journey flow" loading="lazy">
-            </div>
-            <div class="case-body">
-              <span>Stackly · 41% demo conversion lift</span>
-              <h3>Rewrote the buyer story and redesigned acquisition pages for technical ops teams.</h3>
+              <span>Crompty</span>
+              <h3>Built a full-stack digital platform for Crompty to scale their online presence.</h3>
+              <p>Designed and developed a cohesive platform ensuring seamless user experience and modern aesthetic.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-dark" id="process" data-section>
-      <div class="container">
-        <span class="section-kicker reveal">Process</span>
-        <h2 class="section-title reveal delay-1">The Forge Methodology</h2>
-        <p class="section-copy reveal delay-2">We bridge the gap between strategic consulting and rigorous execution. Our operating rhythm guarantees velocity and compounding results.</p>
-
-        <!-- React component for Process Scroll -->
-        <div id="react-root" style="margin-left: calc(-50vw + 50%); width: 100vw; margin-top: 4rem;"></div>
-      </div>
-    </section>
-
-    <section class="section section-white" id="testimonials" data-section>
-      <div class="container testimonial-layout">
-        <div>
-          <span class="section-kicker reveal">Client Confidence</span>
-          <h2 class="section-title reveal delay-1">Don't Take Our Word for It</h2>
-          <p class="section-copy reveal delay-2">Clients stay because the process is clear, the creative is premium, and the numbers are easy to discuss. Here's what they say.</p>
-          <div class="rating-stack reveal delay-3">
-            <span><b>Google Reviews</b><b>5.0</b></span>
-            <span><b>Avg. Response Time</b><b>&lt; 4 hrs</b></span>
-            <span><b>Monthly Reports</b><b>100%</b></span>
-          </div>
-        </div>
-
-        <div>
-          <article class="quote-feature reveal delay-2">
-            <blockquote>"Brand Forge helped us explain a complex fintech product in a way buyers understood immediately. Leads improved, but the quality of our conversations improved even more."</blockquote>
-            <div class="person" style="margin-top: 26px;"><span class="avatar">AM</span><div><strong>Ari Mehta</strong><span>CEO, Northstar Pay</span></div></div>
-          </article>
-          <div class="quote-grid">
-            <article class="quote-card reveal">
-              <blockquote>"They brought structure, taste, and performance thinking to our launch. The team was clear, fast, and focused on the numbers that mattered."</blockquote>
-              <div class="person"><span class="avatar">SK</span><div><strong>Sofia King</strong><span>Founder, Velvet Labs</span></div></div>
-            </article>
-            <article class="quote-card reveal delay-1">
-              <blockquote>"We needed a partner that could connect brand, website, and paid acquisition. Brand Forge gave us a system we can keep scaling."</blockquote>
-              <div class="person"><span class="avatar">DM</span><div><strong>Dante Moore</strong><span>Growth Lead, Stackly</span></div></div>
-            </article>
-          </div>
-        </div>
-      </div>
+    <section id="process" data-section style="overflow-x: hidden;">
+      <div id="react-root" style="width: 100%;"></div>
     </section>
 
     <section class="section section-dark" id="pricing" data-section>
       <div class="container">
-        <div class="pricing-top">
-          <div>
-            <span class="section-kicker reveal">Pricing</span>
-            <h2 class="section-title reveal delay-1">No Hidden Fees. No Surprises. Just Growth.</h2>
-            <p class="section-copy reveal delay-2">Pick the plan that fits your stage. Every tier comes with senior-led strategy, weekly execution, honest reporting, and a dedicated growth partner. You'll know exactly where your money goes.</p>
-          </div>
-          <div class="billing-toggle reveal delay-3" role="group" aria-label="Billing period">
-            <button type="button" class="is-active" data-billing="monthly">Monthly</button>
-            <button type="button" data-billing="annual">Annual - save 20%</button>
-          </div>
-        </div>
+        <span class="section-kicker reveal">Pricing</span>
+        <h2 class="section-title reveal delay-1">No Hidden Fees. No Surprises. Just Growth.</h2>
+        <p class="section-copy reveal delay-2">Pick the plan that fits your stage. Every tier comes with honest execution, transparent reporting, and a dedicated growth partner.</p>
 
-        <div class="pricing-grid">
-          <article class="price-card reveal" data-plan data-monthly="14999">
-            <div class="plan-label"><h3>Starter</h3></div>
-            <p class="plan-note">Just starting out. Clean digital foundation. No bloat. The essentials, done properly.</p>
-            <div class="plan-price"><span class="original-price" data-original></span><strong data-price>₹14,999</strong><span>/mo</span></div>
-            <ul class="features">
-              <li>Brand audit & competitor analysis</li>
-              <li>Core messaging & positioning document</li>
-              <li>1 high-converting landing page design</li>
-              <li>Basic SEO setup & Google Business profile</li>
-              <li>Monthly performance snapshot</li>
-              <li>Email support (48hr response)</li>
-            </ul>
-            <a class="btn btn-light" href="#contact" data-razorpay-plan="starter" data-razorpay-amount="1499900" id="book-starter">Book Starter →</a>
-          </article>
-
-          <article class="price-card reveal delay-1" data-plan data-monthly="29999">
-            <div class="plan-label"><h3>Growth</h3></div>
-            <p class="plan-note">You've got traction. Time for a real growth engine. Strategy, content, and web as one system.</p>
-            <div class="plan-price"><span class="original-price" data-original></span><strong data-price>₹29,999</strong><span>/mo</span></div>
-            <ul class="features">
-              <li>Everything in Starter</li>
-              <li>Brand strategy sprint & message house</li>
-              <li>SEO content engine (4 articles/mo)</li>
-              <li>Social media content calendar</li>
-              <li>2 landing pages with A/B testing</li>
-              <li>Google Analytics & Search Console setup</li>
-              <li>Bi-weekly strategy calls</li>
-              <li>Priority email support (24hr response)</li>
-            </ul>
-            <a class="btn btn-light" href="#contact" data-razorpay-plan="growth" data-razorpay-amount="2999900" id="book-growth">Book Growth →</a>
-          </article>
-
-          <article class="price-card featured reveal delay-2" data-plan data-monthly="49999">
-            <div class="plan-label"><h3>Premium</h3><span class="popular">Most Chosen</span></div>
-            <p class="plan-note">The full stack. Strategy, website, content, paid media, analytics. One team. Everything connected.</p>
-            <div class="plan-price"><span class="original-price" data-original></span><strong data-price>₹49,999</strong><span>/mo</span></div>
-            <ul class="features">
-              <li>Everything in Growth</li>
-              <li>Complete premium website design & development</li>
-              <li>UI/UX design audit & conversion optimization</li>
-              <li>Paid media management (Meta + Google)</li>
-              <li>SEO content engine (8 articles/mo)</li>
-              <li>Email marketing setup & automation flows</li>
-              <li>Weekly performance review & optimization</li>
-              <li>Dedicated growth strategist</li>
-              <li>Slack channel for real-time collaboration</li>
-            </ul>
-            <a class="btn btn-gold" href="#contact" data-razorpay-plan="premium" data-razorpay-amount="4999900" id="book-premium">Book Premium →</a>
-          </article>
-
-          <article class="price-card reveal" data-plan data-monthly="79999">
-            <div class="plan-label"><h3>Scale</h3></div>
-            <p class="plan-note">Scaling hard. Multiple channels. Bigger budgets. Tighter timelines. We handle it.</p>
-            <div class="plan-price"><span class="original-price" data-original></span><strong data-price>₹79,999</strong><span>/mo</span></div>
-            <ul class="features">
-              <li>Everything in Premium</li>
-              <li>Multi-channel paid media (Meta, Google, LinkedIn)</li>
-              <li>Advanced conversion rate optimization</li>
-              <li>Custom analytics dashboard & attribution</li>
-              <li>SEO content engine (12 articles/mo)</li>
-              <li>Video content strategy & production guidance</li>
-              <li>Executive reporting with revenue attribution</li>
-              <li>Bi-weekly executive strategy sessions</li>
-              <li>Priority production queue</li>
-            </ul>
-            <a class="btn btn-light" href="#contact" data-razorpay-plan="scale" data-razorpay-amount="7999900" id="book-scale">Book Scale →</a>
-          </article>
-
-          <article class="price-card reveal delay-1" data-plan="custom">
-            <div class="plan-label"><h3>Enterprise</h3></div>
-            <p class="plan-note">Complex campaigns. Multi-market funnels. Enterprise reporting. Custom everything.</p>
-            <div class="plan-price"><strong>Custom</strong></div>
-            <ul class="features">
-              <li>Everything in Scale</li>
-              <li>Custom growth strategy & roadmap</li>
-              <li>Multi-market campaign architecture</li>
-              <li>Dedicated cross-functional team</li>
-              <li>Advanced reporting & BI integration</li>
-              <li>Executive strategy sessions (weekly)</li>
-              <li>SLA-backed priority production</li>
-              <li>Quarterly business reviews</li>
-              <li>Custom integrations & API support</li>
-            </ul>
-            <a class="btn btn-light" href="#contact" data-razorpay-plan="enterprise" id="book-enterprise">Talk to Sales →</a>
-          </article>
-        </div>
+        <!-- React Pricing Cards mount point -->
+        <div id="pricing-root" style="margin-top: 3rem;"></div>
       </div>
     </section>
 
@@ -3566,9 +3474,8 @@
           <div class="reveal delay-2">
             <p class="section-copy">Tell us where your business is right now, what you're trying to crack, and what hasn't worked. We'll look at it honestly and tell you the smartest next move.</p>
             <div class="contact-points">
-              <div class="contact-point"><strong>Email</strong><a href="mailto:hello@brandforge.media">hello@brandforge.media</a></div>
-              <div class="contact-point"><strong>Phone</strong><a href="tel:+12125550198">+1 212 555 0198</a></div>
-              <div class="contact-point"><strong>Studio Base</strong><span>India. Working with clients globally.</span></div>
+              <div class="contact-point"><strong>Email</strong><a href="mailto:saawant.developer@gmail.com">saawant.developer@gmail.com</a></div>
+              <div class="contact-point"><strong>Studio Base</strong><span>West Bengal, India. Working with local brands.</span></div>
             </div>
           </div>
 
@@ -3631,7 +3538,7 @@
     <div class="container">
       <div class="footer-cta">
         <h2>Stop guessing. <span class="accent-serif">Start growing.</span></h2>
-        <a class="btn btn-gold" href="#contact">Book Strategy Call</a>
+        <a class="btn btn-gold" href="https://wa.me/918927252245">Chat on WhatsApp</a>
       </div>
 
       <div class="footer-grid">
@@ -3662,9 +3569,8 @@
         <div>
           <h3>Contact</h3>
           <div class="footer-links">
-            <a href="mailto:hello@brandforge.media">hello@brandforge.media</a>
-            <a href="tel:+12125550198">+1 212 555 0198</a>
-            <span>India</span>
+            <a href="mailto:saawant.developer@gmail.com">saawant.developer@gmail.com</a>
+            <span>West Bengal, India</span>
           </div>
         </div>
       </div>
@@ -3680,8 +3586,11 @@
     </div>
   </footer>
 
-  <a class="float-call" href="#contact">
-    <span class="btn btn-gold">Book a Free Call</span>
+  <a href="https://wa.me/918927252245" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.527 5.845L0 24l6.345-1.505A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.214-3.726.883.916-3.618-.235-.373A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+    </svg>
   </a>
 
   <script>
@@ -4007,8 +3916,6 @@
               const num = parseFloat(match[2]);
               const suffix = match[3];
               entry.target.textContent = prefix + "0" + suffix;
-              animateCounter(entry.target, num, suffix);
-              entry.target.textContent = prefix + entry.target.textContent;
               // Re-run with prefix handling
               const tick2Start = performance.now();
               const isFloat2 = String(num).includes(".");
@@ -4061,15 +3968,10 @@
     },
     "image": "https://brandforge.media/og-image.jpg",
     "description": "Brand Forge Media is a premium digital growth studio specializing in brand strategy, high-converting website design, UI/UX design, content systems, and performance marketing for ambitious brands across India and globally.",
-    "foundingDate": "2019",
+    "foundingDate": "2026",
     "founder": {
       "@type": "Person",
-      "name": "Brand Forge Media Team"
-    },
-    "numberOfEmployees": {
-      "@type": "QuantitativeValue",
-      "minValue": 5,
-      "maxValue": 20
+      "name": "Sumant Gupta"
     },
     "areaServed": [
       {
@@ -4101,15 +4003,9 @@
       {
         "@type": "ContactPoint",
         "contactType": "sales",
-        "email": "hello@brandforgemedia.com",
+        "email": "saawant.developer@gmail.com",
         "availableLanguage": ["English", "Hindi"],
         "areaServed": "Worldwide"
-      },
-      {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "support@brandforgemedia.com",
-        "availableLanguage": "English"
       }
     ],
     "hasOfferCatalog": {
@@ -4119,35 +4015,23 @@
         {
           "@type": "Offer",
           "itemOffered": { "@type": "Service", "name": "Starter Plan" },
-          "price": "14999",
+          "price": "5999",
           "priceCurrency": "INR",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "14999", "priceCurrency": "INR", "unitText": "MONTH" }
+          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "5999", "priceCurrency": "INR", "unitText": "MONTH" }
         },
         {
           "@type": "Offer",
           "itemOffered": { "@type": "Service", "name": "Growth Plan" },
-          "price": "29999",
+          "price": "12999",
           "priceCurrency": "INR",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29999", "priceCurrency": "INR", "unitText": "MONTH" }
+          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "12999", "priceCurrency": "INR", "unitText": "MONTH" }
         },
         {
           "@type": "Offer",
           "itemOffered": { "@type": "Service", "name": "Premium Plan" },
-          "price": "49999",
+          "price": "24999",
           "priceCurrency": "INR",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "49999", "priceCurrency": "INR", "unitText": "MONTH" }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Scale Plan" },
-          "price": "79999",
-          "priceCurrency": "INR",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "79999", "priceCurrency": "INR", "unitText": "MONTH" }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Enterprise Plan" },
-          "description": "Custom pricing for established brands with complex campaigns and multi-market funnels."
+          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "24999", "priceCurrency": "INR", "unitText": "MONTH" }
         }
       ]
     }
@@ -4302,7 +4186,7 @@
         "name": "How much does it cost to work with Brand Forge Media?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We offer five engagement tiers: Starter (₹14,999/month) for digital foundations, Growth (₹29,999/month) for content and strategy, Premium (₹49,999/month) for full-stack growth, Scale (₹79,999/month) for multi-channel acquisition, and Enterprise (custom pricing) for complex campaigns. Annual billing saves 20%."
+          "text": "We offer three engagement tiers: Starter (₹5,999/month) for digital foundations, Growth (₹12,999/month) for content and strategy, and Premium (₹24,999/month) for full-stack growth. Annual billing saves 20%."
         }
       },
       {
@@ -4326,7 +4210,7 @@
         "name": "What results has Brand Forge Media delivered?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We've scaled 212+ brands, influenced over ₹48Cr in tracked client revenue, and 96% of our clients renew. Some highlights: 340% organic traffic growth for a fintech platform, 6.8x launch ROAS for a premium skincare brand, and 41% demo conversion lift for a SaaS company."
+          "text": "We help businesses get real visibility online. For example, we built a full-stack digital platform for Crompty to scale their online presence."
         }
       }
     ]
